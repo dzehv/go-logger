@@ -1,4 +1,16 @@
-# Golang logging package with levels
+# Golang logging package with numeric levels
+
+## Functions
+
+SetDebugLvl(int) --  set debug level
+SetMsgPrefix(string) -- set all log messages prefix
+UseStderr(bool) -- if true log to stderr instead of stdout
+Debug(int, string, ...interface{}) -- log debug into including caller func name and line number
+Info(...)
+Warning(...)
+Error(...)
+Fatal(...)
+Panic(...) -- log panic message and than panic() with trace
 
 ## Usage
 

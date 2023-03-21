@@ -1,18 +1,3 @@
-/*
-  Golang logging package with numeric levels
-
-  funcs:
-      SetDebugLvl(int) --  set debug level
-      SetMsgPrefix(string) -- set all log messages prefix
-      UseStderr(bool) -- if true log to stderr instead of stdout
-      Debug(int, string, ...interface{}) -- log debug into including caller func name and line number
-      Info(...)
-      Warning(...)
-      Error(...)
-      Fatal(...)
-      Panic(...) -- log panic message and than panic() with trace
-*/
-
 package logger
 
 import (
@@ -34,7 +19,12 @@ var pids string = strconv.Itoa(os.Getpid())
 
 // init
 func init() {
-	log.SetFlags(log.Ldate | log.Ltime | log.Lmicroseconds | log.Lshortfile /* | log.LUTC */)
+	log.SetFlags(log.Ldate | log.Ltime | log.Lmicroseconds | log.Lshortfile)
+}
+
+// set UTC timezone
+func SetUTC() {
+	log.SetFlags(log.LUTC)
 }
 
 // set/change debug level
