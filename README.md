@@ -2,6 +2,7 @@
 
 ## Functions
 
+- SetUTC() -- set UTC timezone flag
 - SetDebugLvl(int) --  set debug level
 - SetMsgPrefix(string) -- set all log messages prefix
 - UseStderr(bool) -- if true log to stderr instead of stdout
