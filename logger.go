@@ -24,7 +24,7 @@ func init() {
 
 // set UTC timezone
 func SetUTC() {
-	log.SetFlags(log.LUTC)
+	log.SetFlags(log.Ldate | log.Ltime | log.Lmicroseconds | log.Lshortfile | log.LUTC)
 }
 
 // set/change debug level
